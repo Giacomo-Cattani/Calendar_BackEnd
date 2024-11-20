@@ -6,25 +6,25 @@ This project is a backend service for a calendar application. It provides APIs t
 ## Installation
 To install and run the project locally, follow these steps:
 
-1. Clone the repository:
-   git clone https://github.com/yourusername/Calendar_BackEnd.git
-   cd Calendar_BackEnd
+1. Clone the repository:\
+   `git clone https://github.com/yourusername/Calendar_BackEnd.git
+   cd Calendar_BackEnd`
 
-2. Install the dependencies:
-   npm install
+2. Install the dependencies:\
+   `npm install`
 
-3. Create a `.env` file in the root directory and add your environment variables:
-   JWT_SECRET=your_jwt_secret
+3. Create a `.env` file in the root directory and add your environment variables:\
+ `JWT_SECRET=your_jwt_secret`
 
 ### Running the Application
 
-To start the application in development mode, run:
-   npm run dev
+To start the application in development mode, run:\
+   `npm run dev`
 
-To start the application in production mode, run:
-   npm start
+To start the application in production mode, run:\
+   `npm start`
 
-The application will be available at http://localhost:3000.
+The application will be available at `http://localhost:3000`.
 
 ## Project Structure
 
@@ -48,24 +48,23 @@ The application will be available at http://localhost:3000.
 - **Method**: `POST`
 - **Description**: Authenticates the user and fetches calendar events.
 - **Request Body**:
-  {
-    "data": {
-      "user": "username",
-      "pwd": "password",
-      "fromDate": "YYYY-MM-DD",
-      "toDate": "YYYY-MM-DD"
-    }
+  >{\
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"data": {\
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"user": "username",\
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"pwd": "password",\
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"fromDate": "YYYY-MM-DD",\
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"toDate": "YYYY-MM-DD"\
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}\
   }
 - **Response**:
-  {
-    "token": "jwt_token",
-    "events": [
-      {
-        "StartTime": "YYYY-MM-DD",
-        "EndTime": "YYYY-MM-DD",
-        "Modulo": "module_name"
-      }
-    ]
+  >{\
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"token": "jwt_token",\
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"events": [\
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{\
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"StartTime": "YYYY-MM-DD",\
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"EndTime": "YYYY-MM-DD",\
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Modulo": "module_name"\
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} ]\
   }
 
 ### Marks
@@ -74,7 +73,7 @@ The application will be available at http://localhost:3000.
 - **Method**: `GET`
 - **Description**: Fetches marks.
 - **Response**:
-    WIP
+    `WIP`
 
 
 ## Deployment
