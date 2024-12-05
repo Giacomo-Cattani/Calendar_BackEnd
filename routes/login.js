@@ -11,11 +11,8 @@ const JWT_SECRET = process.env.JWT_SECRET;
 router.post('/', async function (req, res, next) {
 
   try {
-    console.log(req.body);
 
     const { user, pwd, fromDate, toDate } = req.body.data;
-    console.log(user, pwd, fromDate, toDate);
-
     // Generate a JWT token (you can customize the payload as needed)
     const token = jwt.sign({ email: user }, JWT_SECRET, { expiresIn: '7d' });
 
@@ -34,8 +31,6 @@ router.post('/', async function (req, res, next) {
         },
         responseType: 'arraybuffer',
       });
-
-    console.log(response);
 
     const decoder = new TextDecoder('ISO-8859-1');
     const decodedData = decoder.decode(response.data);
