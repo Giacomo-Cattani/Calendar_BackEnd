@@ -20,7 +20,6 @@ router.post('/', async function (req, res, next) {
 
 
         for (const key in years) {
-            console.log(key);
             const response = await axios.get('https://gestionale.fondazionejobsacademy.org/itsapp.aspx?CMD=voti&corso=' + years[key],
                 {
                     params: {
@@ -43,7 +42,6 @@ router.post('/', async function (req, res, next) {
 
         }
 
-        console.log(marks);
         // Construct the response with the JWT token and events
         const responsePayload = {
             token: token,  // Include the generated token
