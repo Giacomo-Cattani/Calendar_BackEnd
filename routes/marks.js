@@ -45,7 +45,7 @@ router.post('/', async function (req, res, next) {
         // Construct the response with the JWT token and events
         const responsePayload = {
             token: token,  // Include the generated token
-            events: marks
+            marks: marks
         };
 
         // Send the structured response
