@@ -14,7 +14,7 @@ router.post('/', async function (req, res, next) {
 
     const { user, pwd, fromDate, toDate } = req.body.data;
     // Generate a JWT token (you can customize the payload as needed)
-    const token = jwt.sign({ email: user }, JWT_SECRET, { expiresIn: '7d' });
+    const token = jwt.sign({ email: user }, JWT_SECRET, { expiresIn: '30d' });
 
     const response = await axios.get('https://gestionale.fondazionejobsacademy.org/itsapp.aspx?CMD=calendar',
       {
